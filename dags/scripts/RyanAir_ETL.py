@@ -5,6 +5,7 @@ import json
 import psycopg2
 import psycopg2.extras as extras
 
+# Needs new Data API
 
 def extract(api_key):
     # ## Extract
@@ -12,7 +13,7 @@ def extract(api_key):
     # https://airlabs.co/account
     fields = "&_fields=flight_iata,dep_iata,dep_time_utc,dep_estimated_utc,dep_actual_utc,arr_iata,arr_time_utc,arr_estimated_utc,status,duration,delayed,dep_delayed,arr_delayed"
     method = 'ping'
-    params = {'api_key': api_key}
+    params = {'api_key': 'd3b67099-b8b8-4f98-b5e4-069c61b6eb60'}
     # Flights based on Airline, FR is IATA code for RyanAir
     schedules_api = 'https://airlabs.co/api/v9/schedules?airline_iata=FR'
     print("Extracting...")
